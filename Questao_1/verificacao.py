@@ -1,4 +1,4 @@
-from Questao_1.pilha import Pilha
+from pilha import Pilha
 
 
 # Declaração de um objeto da class Pilha
@@ -27,19 +27,19 @@ class Verificacao:
     def verificar_quantidade_par(entrada):
 
         # Se a quantidade de caracteres for impar ele retorna False
-        return len(entrada)%2 != 0
+        return len(entrada)%2 == 0
  
 
     @staticmethod
     def verificar_primeiro_elemento(entrada):
 
-        return entrada[0] in "])}"
+        return entrada[0] not in "])}"
 
 
     @staticmethod
     def verificar_ultimo_elemento(entrada):
 
-        return entrada[-1] in "[({"
+        return entrada[-1] not in "[({"
 
 
     @staticmethod
