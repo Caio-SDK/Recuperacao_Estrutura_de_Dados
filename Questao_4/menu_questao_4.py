@@ -1,52 +1,62 @@
-entrada = "3[ab]2[a]"
+# Bibliotecas utilizadas
+from validacao import Validacao
+from Questao_4.analisar_entrada import AnalisarEntrada
 
-pilha_1 = []
-pilha_2 = []
-pilha_3 = []
-
-
-ativador = False
-ativ = False
-
-for index in range(len(entrada)-1, -1, -1):
-
-    if ativador and entrada[index] != "[":
-        pilha_2.append(entrada[index])
-
-    
-    if ativ and entrada[index] != "]":
-        string = ""
-        for elemento in range(len(pilha_2)-1, -1, -1):
-            string += pilha_2[elemento]
-            pilha_2.pop()
-        resultado = string*int(entrada[index])
-        # print(resultado)
-        for letra in resultado:
-            pilha_3.append(letra)
-        
-
-    if entrada[index] == "]":
-        ativador = True
-
-        ativ = False
-    
-    elif entrada[index] == "[":
-        ativ = True
-
-        ativador = False
+import os
+import sys
 
 
-for i in range(len(pilha_3)-1, -1, -1):
-    
-    pilha_2.append(pilha_3[i])
-    
+# Variável que guardará as opções do menu
+opcoes_do_menu = """
+[ 1 ] = Adicionar uma nova entrada
+[ 2 ] = Voltar para o menu anterior
+[ 3 ] = Sair do programa
+"""
+
+# Criando objeto da classe para efetuar os seus métodos
+analisar = AnalisarEntrada()
 
 
-print("".join(pilha_2))
-    
+# Classe Menu
+class MenuQuestao4:
 
-    
+    #  Método estático para a criação do menu principal da questão 3
+    @staticmethod
+    def menu_principal_questao_4():
 
-# print(pilha_1)
-# print(pilha_2)
-# print(pilha_3)
+        while True:
+
+            # Exibição das opções
+            print(opcoes_do_menu)
+
+            # Requisitando uma opção desejada ao usuário
+            opcao = Validacao.ValidacaoNumeroInteiro("Digite sua opção: ")
+
+            # Limpando o terminal para não haver poluição visual
+            os.system("cls")
+
+            # Opção 1
+            if opcao == 1:
+
+                # Requisitando uma entrada para o algoritmo anaisar
+                entrada = input("Digite a entrada a ser analisada: ")
+
+                # Exibição da saída
+                print(f"\n{analisar.analisar_mensagem(entrada)}")
+            
+            # Opção 2
+            elif opcao == 2:
+
+                # Fim do laço de repetição para voltar ao menu anterior
+                break
+            
+            # Opção 3
+            elif opcao == 3:
+
+                # Saindo do programa
+                sys.exit()
+            
+            # Opção inválida
+            else:
+
+                print("\nDigite uma opção válida!!!\n")

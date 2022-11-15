@@ -1,8 +1,10 @@
-
+# Bibliotecas utilizadas
 from Questao_3.menu_questao_3 import MenuQuestao3
+from Questao_4.menu_questao_4 import MenuQuestao4
 
 import os
 import sys
+
 
 mensagem = """
 [ 1 ] = Visualizar questão 1
@@ -34,7 +36,7 @@ while True:
     
     elif opc == 4:
 
-        pass
+        MenuQuestao4.menu_principal_questao_4()
 
     elif opc == 5:
 

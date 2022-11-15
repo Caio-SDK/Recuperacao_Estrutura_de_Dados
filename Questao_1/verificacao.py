@@ -6,7 +6,6 @@ pilha_principal = Pilha()
 pilha_auxiliar = Pilha()
 
 
-
 # Classe Verificadora
 class Verificacao:
 

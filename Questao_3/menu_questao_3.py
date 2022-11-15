@@ -1,6 +1,7 @@
 # Bibliotecas utilizadas
-from Questao_3.validacao_questao_3 import Validacao
+from validacao import Validacao
 from Questao_3.mini_pilha import miniPilha
+
 import os
 import sys
 

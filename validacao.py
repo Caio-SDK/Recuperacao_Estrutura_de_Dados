@@ -4,9 +4,8 @@ import sys
 
 # Classe Validação
 class Validacao:
-
-    @staticmethod
     # Definição de um método estático para validação de números inteiros
+    @staticmethod
     def ValidacaoNumeroInteiro(mensagem):
 
         while True:
@@ -28,3 +27,4 @@ class Validacao:
             except:
 
                 print("Por favor digite um número inteiro válido!!!")
+

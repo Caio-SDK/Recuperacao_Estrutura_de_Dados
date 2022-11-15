@@ -80,9 +80,3 @@ class Pilha:
             return self.__estrutura[-1]
 
         return self.__estrutura[key]
-
-
-if __name__ == '__main__':
-    pilha = Pilha()
-    pilha.incializacao_pilha("()))4(((5")
-    print(pilha[-1])
