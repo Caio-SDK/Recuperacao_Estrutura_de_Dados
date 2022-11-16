@@ -1,11 +1,17 @@
 # Bibliotecas utilizadas
+from Questao_2.menu_questao_2 import MenuQuestao2
 from Questao_3.menu_questao_3 import MenuQuestao3
 from Questao_4.menu_questao_4 import MenuQuestao4
 
+# Biblioteca de validação
+from validacao import Validacao
+
+# Bibliotecas de sistema
 import os
 import sys
 
 
+# Opções do menu interativo
 mensagem = """
 [ 1 ] = Visualizar questão 1
 [ 2 ] = Visualizar questão 2
@@ -16,33 +22,42 @@ mensagem = """
 
 while True:
 
+    # Exibição das opções
     print(mensagem)
 
-    opc = int(input("Digite sua opção: "))
+    # Requisitando uma opção para o usuário
+    opcao_desejada = Validacao.ValidacaoNumeroInteiro("Digite sua opção: ")
 
+    # Limpando o terminal para não haver poluição visual
     os.system("cls")
 
-    if opc == 1:
+    # Opção 1
+    if opcao_desejada == 1:
 
         pass
 
-    elif opc == 2:
+    # Opção 2
+    elif opcao_desejada == 2:
 
-        pass
+        MenuQuestao2.menu_principal_questao_2()
 
-    elif opc == 3:
+    # Opção 3
+    elif opcao_desejada == 3:
 
         MenuQuestao3.menu_principal_questao_3()
     
-    elif opc == 4:
+    # Opção 4
+    elif opcao_desejada == 4:
 
         MenuQuestao4.menu_principal_questao_4()
 
-    elif opc == 5:
+    # Opção 5
+    elif opcao_desejada == 5:
 
         print("\n\nObrigado por teste!!!\n")
         sys.exit()
 
+    # Opção inválida
     else:
 
         print("Digite uma opção válidação!!!")

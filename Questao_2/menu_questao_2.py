@@ -1,6 +1,6 @@
 # Bibliotecas utilizadas
 from validacao import Validacao
-from Questao_4.analisar_entrada import AnalisarEntrada
+from Questao_2.back_space import BackSpace
 
 import os
 import sys
@@ -8,21 +8,21 @@ import sys
 
 # Variável que guardará as opções do menu
 opcoes_do_menu = """
-[ 1 ] = Adicionar uma nova entrada
+[ 1 ] = Analisar duas entradas
 [ 2 ] = Voltar para o menu anterior
 [ 3 ] = Sair do programa
 """
 
 # Criando objeto da classe para efetuar os seus métodos
-analisar = AnalisarEntrada()
+back_space = BackSpace()
 
 
 # Classe Menu
-class MenuQuestao4:
+class MenuQuestao2:
 
-    #  Método estático para a criação do menu principal da questão 4
+    #  Método estático para a criação do menu principal da questão 2
     @staticmethod
-    def menu_principal_questao_4():
+    def menu_principal_questao_2():
 
         while True:
 
@@ -39,10 +39,21 @@ class MenuQuestao4:
             if opcao == 1:
 
                 # Requisitando uma entrada para o algoritmo anaisar
-                entrada = input("Digite a entrada a ser analisada: ")
+                primeira_entrada = input("Digite a entrada a ser analisada: ")
+                segunda_entrada = input("Digite a entrada a ser analisada: ")
 
-                # Exibição da saída
-                print(f"\n{analisar.analisar_mensagem(entrada)}")
+                # Decodificar as mensagens recebidas como entrada
+                mensagem_primaria = back_space.decodificar_mensagem(primeira_entrada)
+                mensagem_secundaria = back_space.decodificar_mensagem(segunda_entrada)
+
+                # Se as duas mensagens forem iguais
+                if mensagem_primaria == mensagem_secundaria:
+
+                    print(True)
+                
+                else:
+
+                    print(False)
             
             # Opção 2
             elif opcao == 2:
@@ -60,3 +71,4 @@ class MenuQuestao4:
             else:
 
                 print("\nDigite uma opção válida!!!\n")
+
