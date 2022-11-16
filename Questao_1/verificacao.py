@@ -1,11 +1,3 @@
-from pilha import Pilha
-
-
-# Declaração de um objeto da class Pilha
-pilha_principal = Pilha()
-pilha_auxiliar = Pilha()
-
-
 # Classe Verificadora
 class Verificacao:
 

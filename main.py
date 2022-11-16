@@ -1,4 +1,5 @@
 # Bibliotecas utilizadas
+from Questao_1.menu_questao_1 import MenuQuestao1
 from Questao_2.menu_questao_2 import MenuQuestao2
 from Questao_3.menu_questao_3 import MenuQuestao3
 from Questao_4.menu_questao_4 import MenuQuestao4
@@ -34,7 +35,7 @@ while True:
     # Opção 1
     if opcao_desejada == 1:
 
-        pass
+        MenuQuestao1.menu_principal_questao_1()
 
     # Opção 2
     elif opcao_desejada == 2:
