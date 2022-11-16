@@ -71,4 +71,3 @@ class MenuQuestao2:
             else:
 
                 print("\nDigite uma opção válida!!!\n")
-

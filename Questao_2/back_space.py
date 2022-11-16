@@ -54,4 +54,3 @@ class BackSpace:
         
         # Retorna a mensagem codificada em forma de string
         return "".join(pilha_entrada)
-

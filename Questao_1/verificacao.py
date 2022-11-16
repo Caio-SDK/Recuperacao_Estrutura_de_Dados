@@ -49,7 +49,3 @@ class Verificacao:
                 quantidade_fechado += 1
         
         return quantidade_fechado == quantidade_aberto
-
-    
-    
-

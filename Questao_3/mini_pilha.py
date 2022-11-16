@@ -75,5 +75,3 @@ class miniPilha:
             saida += f"Elemento {index + 1} = " + str(numero) + "\n"
         
         return saida
-
-

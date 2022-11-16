@@ -27,4 +27,3 @@ class Validacao:
             except:
 
                 print("Por favor digite um número inteiro válido!!!")
-
